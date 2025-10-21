@@ -1,5 +1,13 @@
 # Secrets - Anonymous Sharing Platform
 
+
+#LIVE PREVIEW:-
+
+
+
+<img width="1351" height="943" alt="image" src="https://github.com/user-attachments/assets/39fb9682-216e-4fca-ab3a-14ea2bac1d08" />
+
+
 A secure web application that allows users to share their thoughts and secrets anonymously in a safe environment.
 
 ## Features
