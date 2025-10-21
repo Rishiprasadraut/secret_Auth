@@ -1,0 +1,78 @@
+<%- include('partials/header.ejs') %>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card fade-in">
+                <div class="card-body">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-feather-alt fa-3x text-primary mb-3"></i>
+                        <h2 class="card-title">Share Your Secret</h2>
+                        <p class="text-muted">Your thoughts will remain completely anonymous</p>
+                    </div>
+                    
+                    <form action="/submit" method="post" id="secretForm">
+                        <div class="form-group">
+                            <label for="secret" class="form-label">What's on your mind?</label>
+                            <textarea 
+                                class="form-control" 
+                                name="secret" 
+                                id="secret" 
+                                rows="6" 
+                                required 
+                                placeholder="Share your thoughts, feelings, or experiences..."
+                                maxlength="500"
+                            ></textarea>
+                            <div class="d-flex justify-content-between mt-2">
+                                <small class="form-text text-muted">Your secret will be shared anonymously</small>
+                                <small class="form-text text-muted"><span id="charCount">0</span>/500</small>
+                            </div>
+                        </div>
+                        
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-dark btn-lg">
+                                <span class="btn-text">
+                                    <i class="fas fa-paper-plane me-2"></i>Share Anonymously
+                                </span>
+                                <span class="loading d-none"></span>
+                            </button>
+                            <a href="/secret" class="btn btn-outline-secondary">
+                                <i class="fas fa-arrow-left me-2"></i>Back to Dashboard
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+var secretTextarea = document.getElementById('secret');
+var charCount = document.getElementById('charCount');
+
+secretTextarea.addEventListener('input', function() {
+    var count = this.value.length;
+    charCount.textContent = count;
+    
+    if (count > 450) {
+        charCount.style.color = '#dc3545';
+    } else if (count > 400) {
+        charCount.style.color = '#ffc107';
+    } else {
+        charCount.style.color = '#6c757d';
+    }
+});
+
+document.getElementById('secretForm').addEventListener('submit', function(e) {
+    var btn = this.querySelector('button[type="submit"]');
+    var btnText = btn.querySelector('.btn-text');
+    var loading = btn.querySelector('.loading');
+    
+    btnText.classList.add('d-none');
+    loading.classList.remove('d-none');
+    btn.disabled = true;
+});
+</script>
+
+<%- include('partials/footer.ejs') %>
