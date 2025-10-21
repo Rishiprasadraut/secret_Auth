@@ -1,6 +1,5 @@
 const express = require('express');
 const bodyparser = require('body-parser');
-const encrypt = require('mongoose-encryption');
 const cookieParser = require('cookie-parser');
 const jwt = require('jsonwebtoken');
 
