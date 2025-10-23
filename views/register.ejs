@@ -18,9 +18,16 @@
                             <div class="form-group">
                                 <label for="password">Password</label>
                                 <input type="password" id="password" class="form-control" name="password">
-                                <span class="toggle-password" onclick="togglePassword()"><i class="fas fa-eye"></i></span>
+                                <span class="toggle-password" onclick="togglePassword()"><i
+                                        class="fas fa-eye"></i></span>
                             </div>
                             <button type=" submit" class="btn btn-dark">Register</button>
+                            <% if (typeof error !=='undefined' && error) { %>
+                                <div class="alert alert-danger mt-3">
+                                    <%= error %>
+                                </div>
+                                <% } %>
+
                         </form>
                     </div>
                 </div>
