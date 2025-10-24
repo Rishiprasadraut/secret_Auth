@@ -74,24 +74,6 @@ function authenticateToken(req, res, next) {
 
 }
 
-app.get("/", function (req, res) {
-    res.render("home");
-})
-
-app.get("/submit", (req, res) => {
-    res.render("submit");
-})
-
-app.get("/login", (req, res) => {
-    res.render("login", { error: null });
-});
-
-
-app.get("/register", function (req, res) {
-    res.render("register", { error: null });
-});
-
-
 app.get("/secret", authenticateToken, async (req, res) => {
     try {
         const user = await User.findById(req.user.id).select("-password");
@@ -193,6 +175,23 @@ app.post("/login", async function (req, res) {
     }
 });
 
+app.get("/", function (req, res) {
+    res.render("home");
+})
+
+app.get("/submit", (req, res) => {
+    res.render("submit");
+})
+
+app.get("/login", (req, res) => {
+    res.render("login");
+});
+
+
+app.get("/register", function (req, res) {
+    res.render("register");
+});
+
 app.post("/submit", async (req, res) => {
     const secret = req.body.secret;
     await Secret.create({ content: secret });
@@ -204,6 +203,8 @@ app.get("/logout", (req, res) => {
     res.clearCookie("token");
     res.redirect("/login");
 });
+
+
 
 app.listen(port, function () {
     console.log("Server has started successfully")
