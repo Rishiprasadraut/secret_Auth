@@ -2,12 +2,9 @@
 
 
 #LIVE PREVIEW:-
-
 https://secret-auth.onrender.com
 
-
-
-<img width="1351" height="943" alt="image" src="https://github.com/user-attachments/assets/39fb9682-216e-4fca-ab3a-14ea2bac1d08" />
+<img width="1352" height="941" alt="image" src="https://github.com/user-attachments/assets/e89bf488-86e3-469c-86bc-37daf1e72eb2" />
 
 
 A secure web application that allows users to share their thoughts and secrets anonymously in a safe environment.
