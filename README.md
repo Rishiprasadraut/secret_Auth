@@ -110,6 +110,3 @@ npm run dev
 4. Test thoroughly
 5. Submit a pull request
 
-## License
-
-MIT License - see LICENSE file for details
