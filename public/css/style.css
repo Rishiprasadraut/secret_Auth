@@ -1,18 +1,18 @@
 body {
-  background: linear-gradient(135deg, #ff9292 0%, #ff2e2e 100%);
+  background: linear-gradient(135deg, #ff585b 0%, #990002 100%);
   min-height: 100vh;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
 .jumbotron {
-  background: rgba(0, 0, 0, 0.1);
+  background:  #ffffff67;
   /* backdrop-filter: blur(10px); */
   border-radius: 20px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0,0,0,0.2);
   color: white;
-  margin-top: 200px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  margin: 300px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
 }
 
 .centered {
@@ -20,13 +20,20 @@ body {
   text-align: center;
 }
 
+.jumbotron .btn{
+  margin-bottom: 20px;
+  gap: 1rem;
+}
+
+.row{
+  justify-content: center;
+}
 
 .card {
-  background: rgba(224, 224, 224, 0.95);
-  backdrop-filter: blur(10px);
-  border-radius: 15px;
+  background: #ffffff67;
+  border-radius: 15px solid black;
   border: none;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
 }
 
@@ -38,6 +45,10 @@ body {
   padding: 2rem;
 }
 
+.card-body h1{
+  text-align:center;
+  margin-bottom: 10px;
+}
 
 .form-group {
   position: relative;
@@ -53,7 +64,7 @@ body {
 }
 
 .form-control:focus {
-  border-color: #ea6666;
+  border-color: #990002;
   box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
   background: white;
 }
@@ -84,12 +95,12 @@ body {
 }
 
 .btn-dark {
-  background: linear-gradient(45deg, #ff9292, #ff2e2e);
+  background: linear-gradient(45deg, #ff585b #990002);
   border: none;
 }
 
 .btn-dark:hover {
-  background: linear-gradient(45deg, #ff9292, #ff2e2e);
+  background: linear-gradient(45deg, #ff585b #990002);
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
@@ -101,8 +112,9 @@ body {
 }
 
 .btn-light:hover {
-  background: white;
-  color: #ff1818;
+  background: rgb(235, 233, 233);
+  color: #990002;
+  border: 2px solid #990002;
   transform: translateY(-2px);
 }
 
@@ -170,12 +182,12 @@ body {
   height: 20px;
   border: 3px solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
-  border-top-color: #fff;
+  border-top-color: #810000;
   animation: spin 1s ease-in-out infinite;
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to { transform:rotate(360deg); }
 }
 
 
@@ -184,13 +196,13 @@ body {
 }
 
 .form-control {
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  box-shadow:0 1px 3px rgba(0,0,0,0.05);
 }
 
 .jumbotron {
-  margin-top: 300px;
+  margin-top:300px;
 }
 
 .secret-container {
-  padding: 2.9rem;
+  padding:2.9rem;
 }
